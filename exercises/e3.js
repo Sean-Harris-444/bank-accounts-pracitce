@@ -2,6 +2,7 @@
 // EXERCISE 3
 // Make sure to solve two parts beneath
 
+
 /** 
  * PART 1
  * Return the average value for the given array of numbers.
@@ -10,7 +11,12 @@
 
 export function getAverage(array) {
   // Your code goes here...
-
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    let currentNum = array[i]
+    total += currentNum;
+  }
+  return total / array.length;
 }
 
 
@@ -23,7 +29,13 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
-
+  let add = 0;
+  for (let i = 0; i < str.length; i++){
+    if (!isNaN(str[i])){
+      add += parseInt(str[i]);
+    }
+    }
+  return add;
 }
 
 

@@ -6,8 +6,23 @@
 
 export function getClientWithLeastPositiveBalance(array) {
   // Your code goes here...
-  
+  const newArr = [];
+    let min ;
+    for (let i = 0;  i < array.length; i++){
+      if (array[i].balance > 0 && min !== undefined && array[i].balance < min.balance) {
+        min = array[i];
+      } else if (min === undefined && array[i].balance > 0) {
+        min = array[i];
+      } 
+    }
+    newArr.push(min)
+    if (newArr[0] !== undefined) {
+      return newArr; 
+    } else {
+      return [];
+    }
 }
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"

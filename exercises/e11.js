@@ -6,7 +6,19 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
+  const newArr = [];
+  for (let i = 0; i < array.length; i ++) {
+    let add = 0; 
+    if(array[i].withdrawals) {
+      for (let x = 0; x < array[i].withdrawals.length; x++) {
+        add += array[i].withdrawals[x];
+      }
+    } else if (array[i].withdrawals <= 0) {
+      newArr.push(0)
+    }
+    newArr.push(add);
+  }
+  return newArr;
 }
 
 // === TEST YOURSELF ===

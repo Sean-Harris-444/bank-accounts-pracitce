@@ -10,6 +10,7 @@ export const bankAccounts = [
   {
     id: 3,
     name: "Joshua",
+
     balance: 18456.57,
     deposits: [4000, 5000, 6000, 9200, 256.57],
     withdrawals: [1500, 1400, 1500, 1500],

@@ -6,8 +6,31 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-
+  const newArr = [];
+  let max = array[0];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].balance > max.balance) {
+      max = array[i];
+    }
+  }
+  newArr.push(max);
+  return newArr;
 }
+
+// #1 
+// newArr []
+// i = 0
+// max = 1100
+// max = object 
+// newArr = [ object ]
+
+// #2
+// newArr [ object ]
+// i = 1
+// max = 1100
+// max = object 
+// newArr = [ object ]
+
 
 
 
